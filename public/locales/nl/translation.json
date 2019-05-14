@@ -1,0 +1,13 @@
+{
+    "title": "I don't what write",
+    "header": {
+        "list": "Mijn lijst"
+    },
+    "configurator": {
+        "context": {
+            "title": "configurator voor elektrische laadklemmen",
+            "description": "Rexel ondersteunt u in deze nieuwe markt met de configurator.",
+            "type": "Contexte"
+        }
+    }
+}

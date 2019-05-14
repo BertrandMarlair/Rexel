@@ -1,0 +1,13 @@
+{
+    "title": "je ne sais pas quoi écrire",
+    "header": {
+        "list": "Mes Listes"
+    },
+    "configurator": {
+        "context": {
+            "title": "configurateur bornes de recharge électriques",
+            "description": "Rexel vous accompagne dans ce nouveau marché grâce au configurateur",
+            "type": "Contexte"
+        }
+    }
+}
