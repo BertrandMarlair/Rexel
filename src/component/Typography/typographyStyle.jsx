@@ -10,6 +10,7 @@ import {
   warningColor,
   dangerColor,
   textColor,
+  whiteColor,
 } from 'style/constant'
 
 const typographyStyle = {
@@ -25,8 +26,8 @@ const typographyStyle = {
   },
   title:{
     fontSize: '1.5rem',
-    color: '#353535',
-    marginBottom: '20px',
+    margin: '20px 0',
+    fontWeight: 600,
   },
   quote: {
     padding: '10px 20px',
@@ -53,6 +54,7 @@ const typographyStyle = {
   normalText: {
     fontSize: '1rem',
     color: textColor,
+    lineHeight: 'normal',
   },
   smallTitleText: {
     color: '#464646',
@@ -70,6 +72,9 @@ const typographyStyle = {
   },
   dangerText: {
     color: dangerColor,
+  },
+  white: {
+    color: whiteColor,
   },
 }
 

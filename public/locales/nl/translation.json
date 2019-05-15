@@ -4,10 +4,37 @@
         "list": "Mijn lijst"
     },
     "configurator": {
-        "context": {
+        "start": {
             "title": "configurator voor elektrische laadklemmen",
             "description": "Rexel ondersteunt u in deze nieuwe markt met de configurator.",
             "type": "Contexte"
+        },
+        "context": {
+            "type": "Type installatie",
+            "application": "Wat is de applicatie",
+            "applicationDescription": "Als de werkgever een aparte factuur aanvraagt, moet u gebruik maken van een abonnementsysteem dat verkrijgbaar is bij een provider. Deze aanbieder kan de terminal via navigatiesystemen zichtbaar maken voor andere e-geleiders.",
+            "resident": "Residentiële",
+            "enterprise": "Onderneming",
+            "horeca": "Horeca",
+            "private": "Privégebruik",
+            "privateParking": "Parkeren privé",
+            "semiPrivateParking": "Parkeerplaats semi-publiek",
+            "privateClientParking": "Parkeerplaats voor klanten (privé)",
+            "privateSemiPublicParking": "Parkeren (semi-openbaar)",
+            "societe": "dienstauto",
+            "number": "Aantal/types van terminals",
+            "numberDescription1": "Het is raadzaam om met uw eindklant mee te gaan naar de plaats waar de terminals worden geïnstalleerd. Op deze manier kunt u hem/haar persoonlijk informeren over de technische aspecten van de lading en gemakkelijker een oplossing op maat voorstellen.",
+            "numberDescription2": "Tijdens uw eerste installatie kan een Rexel-specialist u ter plaatse adviseren en kunt u contact met hem opnemen via ev@rexel.be ",
+            "cars": "Voor welke auto?",
+            "select": "Kies het model",
+            "prise": "Plug",
+            "courantAc": "Stroom AC max",
+            "chargeDC": "Lading rapide DC",
+            "chargeAC": "Lading rapide AC",
+            "battery": "Batterij",
+            "tensionAC": "Spanning AC",
+            "clear": "Verwijderen",
+            "next": "Volgende pagina"
         }
     }
 }

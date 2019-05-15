@@ -1,12 +1,12 @@
-import { createStore } from "redux";
-import pageReducer from "reducers/pageReducer";
+import { createStore, combineReducers } from "redux";
+import contextConfig from "reducers/contextConfig";
 
-const initialState = {
-    page: 0
-}
+const rootReducer = combineReducers({
+    contextConfig
+})
 
-function configureStore(state = initialState) {
-    return createStore(pageReducer, state);
+function configureStore(state) {
+    return createStore(rootReducer, state);
 }
 
 export default configureStore;

@@ -26,6 +26,7 @@ function RegularButton({ ...props }) {
     muiClasses,
     centered,
     icon,
+    big,
     ...rest
   } = props
   const btnClasses = classNames({
@@ -40,6 +41,7 @@ function RegularButton({ ...props }) {
     [classes.link]: link,
     [classes.justIcon]: justIcon,
     [classes.icon]: icon,
+    [classes.big]: big,
     [className]: className,
   })
   return ( 
@@ -85,6 +87,7 @@ RegularButton.propTypes = {
   className: PropTypes.string,
   muiClasses: PropTypes.object,
   icon: PropTypes.bool,
+  big: PropTypes.bool,
 }
 
 export default withStyles(buttonStyle)(RegularButton)

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Context from 'component/ConfiguratorPage/Context/Context'
 import { withStyles } from '@material-ui/core'
 import ConfiguratorStyle from "../ConfiguratorStyle"
 
@@ -23,10 +23,7 @@ const DisplayPage = props => {
         rendering() ? (
             <div className={rendering()}>
                 <div className={page % 2 ? classes.blueRight : classes.blueLeft}>
-                    <h1>Page 2</h1>
-                    <h2>Page: {page}</h2>
-                    <Link to={"0"}>prev</Link>
-                    <Link to={"1"}>next</Link>
+                    <Context />
                 </div>
             </div>
         ): (

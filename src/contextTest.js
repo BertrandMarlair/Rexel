@@ -10,7 +10,7 @@ class App extends Component {
           residentiel: {
             id: 0,
             target: null,
-            name: "residentiel",
+            name: "resitent",
             description: "Si votre client souhaite une borne à domicile.",
             application: [{
               id: 0,

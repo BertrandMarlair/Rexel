@@ -11,7 +11,7 @@ import {
     warningColor,
     dangerColor,
     secondaryColor,
-  darkColor,
+    darkColor,
   } from 'style/constant'
   
   const buttonStyle = {
@@ -424,6 +424,9 @@ import {
     },
     icon: {
       padding: '8px 15px 8px 10px',
+    },
+    big: {
+      padding: '18px 40px',
     },
     block: {
       width: '100% !important',

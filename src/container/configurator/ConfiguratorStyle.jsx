@@ -2,10 +2,17 @@ import { transition, whiteColor} from 'style/constant'
 
 const page =  {
     width: '50vw',
-    height: '100vh',
+    height: '100%',
     position: 'absolute',
     transition: transition.transition,
     background: whiteColor,
+    boxSizing: 'border-box',
+}
+
+const side = {
+    overflow: 'scroll',
+    height: '100%',
+    padding: 20,
     boxSizing: 'border-box',
 }
 
@@ -41,30 +48,22 @@ const ConfiguratorStyle = {
         minHeight: 'calc(100vh - 90px)',
     },
     blueLeft: {
-        height: '100%',
-        background: '#78CAF0',
-        padding: 20,
-        boxSizing: 'border-box',
+        ...side,
         boxShadow: 'inset 80px 0px 100px 0px #71bde0',
+        background: '#78CAF0',
     },
     blueRight: {
-        height: '100%',
-        background: '#78CAF0',
-        padding: 20,
-        boxSizing: 'border-box',
+        ...side,
         boxShadow: 'inset -80px 0px 100px 0px #71bde0',
+        background: '#78CAF0',
     },
     whiteLeft: {
-        height: '100%',
+        ...side,
         background: 'white',
-        padding: 20,
-        boxSizing: 'border-box',
     },
     whiteRight: {
-        height: '100%',
+        ...side,
         background: 'white',
-        padding: 20,
-        boxSizing: 'border-box',
     }
 }
 
