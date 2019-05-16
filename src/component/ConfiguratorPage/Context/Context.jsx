@@ -29,7 +29,7 @@ const Context = props => {
     const restoreState = () => dispatch({ type: 'RESTORE' })
     
     const { t } = useTranslation();
-    const { classes } = props
+    const { classes, page } = props
     const { installation, bornes } = contextConfig
 
     function handleSelectSimple(index) {
@@ -78,7 +78,8 @@ const Context = props => {
     }
 
     function displayNextPage(){
-        if (installation.target){
+        console.log(page)
+        if (page === 0 && installation.target){
             if (installation.type[installation.target].target !== null){
                 if (displayCars()){
                     // if(checkCarsComplete){

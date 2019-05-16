@@ -23,7 +23,7 @@ const DisplayPage = props => {
         rendering() ? (
             <div className={rendering()}>
                 <div className={page % 2 ? classes.blueRight : classes.blueLeft}>
-                    <Context />
+                    <Context page={page}  />
                 </div>
             </div>
         ): (
