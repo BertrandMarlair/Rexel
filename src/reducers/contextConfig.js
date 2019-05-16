@@ -59,6 +59,10 @@ const initalState = {
             description: "Préférez une borne double pour deux emplacements de parking contigus. Le prix sera moindre et l'installation plus simple.",
         }
     },
+    cars: {
+        carSelect: null,
+        modelCar: null,
+    }
 }
 
 export default function contextConfig(state = initalState, action) {
@@ -105,6 +109,22 @@ export default function contextConfig(state = initalState, action) {
                         ...state.bornes.double,
                         target: action.payload
                     }
+                }
+            }
+        case 'SELECT_CAR':
+            return {
+                ...state,
+                cars: {
+                    ...state.cars,
+                    carSelect: action.payload
+                }
+            }
+        case 'SELECT_MODEL':
+            return {
+                ...state,
+                cars: {
+                    ...state.cars,
+                    modelCar: action.payload
                 }
             }
         case 'RESTORE':

@@ -30,7 +30,7 @@ const Context = props => {
     
     const { t } = useTranslation();
     const { classes, page } = props
-    const { installation, bornes } = contextConfig
+    const { installation, bornes, cars } = contextConfig
 
     function handleSelectSimple(index) {
         const newTarget = index === bornes.simple.target ? null : index
@@ -78,14 +78,12 @@ const Context = props => {
     }
 
     function displayNextPage(){
-        console.log(page)
         if (page === 0 && installation.target){
             if (installation.type[installation.target].target !== null){
                 if (displayCars()){
-                    // if(checkCarsComplete){
-
-                    // }
-                    return false
+                    if (cars.modelCar !== null && cars.carSelect !== null){
+                        return true
+                    }
                 }else{
                     if (bornes.simple.target !== null || bornes.double.target !== null) {
                         return true

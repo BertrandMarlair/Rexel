@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { withStyles } from "@material-ui/core";
 import ContextStyle from "./ContextStyle";
 import { secondaryColor, whiteColor } from 'style/constant';
@@ -6,6 +6,7 @@ import Select from "component/CustomInput/Select";
 import { useTranslation } from 'react-i18next';
 import Title from 'component/Typography/Title';
 import Text from 'component/Typography/Normal';
+import { useSelector, useDispatch } from 'react-redux';
 // import ChevronLeft from '@material-ui/icons/ChevronLeft'
 // import ChevronRight from '@material-ui/icons/ChevronRight'
 // import SwipeableViews from 'react-swipeable-views';
@@ -13,8 +14,13 @@ import Text from 'component/Typography/Normal';
 const Cars = props => {
     const { classes } = props
 
-    const [modelCar, setModelCar] = useState(null);
-    const [carSelect, setCarSelect] = useState(null);
+    const contextConfig = useSelector(state => state.contextConfig)
+    const dispatch = useDispatch()
+
+    console.log(contextConfig)
+
+    const { modelCar, carSelect } = contextConfig.cars
+
      // const [activeStepCars, setActiveStepCars] = useState(0);
     // const maxSteps = getCars.length;
 
@@ -29,21 +35,24 @@ const Cars = props => {
     // function handleBackCars() {
     //     setActiveStepCars(prevActiveStep => prevActiveStep - 1);
     // }
+    
+    const targetModelCar = (payload) => dispatch({ type: 'SELECT_MODEL', payload })
+    const targetCarSelect = (payload) => dispatch({ type: 'SELECT_CAR', payload })
 
 
     function handleSelectCar(index) {
-        setCarSelect(index === carSelect ? null : index);
-        setModelCar(null);
+        targetCarSelect(index === carSelect ? null : index);
+        targetModelCar(null);
     }
 
     function handleSelectModel(e) {
-        setModelCar(e.target.value);
+        targetModelCar(e.target.value);
     }
 
     function renderCarsModel(index) {
         const car = getCars[getCars.findIndex(car => car.id === index)]
         return (
-            car.model.map((model, index) => (
+            car && car.model.map((model, index) => (
                 <option key={`modal/${index}`} value={model.name}>{model.name}</option>
             ))
         )
@@ -82,7 +91,7 @@ const Cars = props => {
             </div>
             {carSelect !== null &&
                 <div className={classes.carSelect}>
-                    <Select onChange={(e) => handleSelectModel(e)} className={classes.select}>
+                    <Select value={modelCar ? modelCar : ""} onChange={(e) => handleSelectModel(e)} className={classes.select}>
                         <option value="">{t('configurator.context.select')}</option>
                         {renderCarsModel(carSelect)}
                     </Select>
