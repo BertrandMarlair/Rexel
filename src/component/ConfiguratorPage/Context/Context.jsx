@@ -26,6 +26,7 @@ const Context = props => {
     const targetApplication = (typeName, applicationId) => dispatch({ type: 'EDIT_APPLICATION_TARGET', payload: { typeName, applicationId} })
     const targetBorneSimple = (payload) => dispatch({ type: 'EDIT_BORNE_SIMPLE', payload })
     const targetBorneDouble = (payload) => dispatch({ type: 'EDIT_BORNE_DOUBLE', payload })
+    const restoreState = () => dispatch({ type: 'RESTORE' })
     
     const { t } = useTranslation();
     const { classes } = props
@@ -119,7 +120,7 @@ const Context = props => {
                             </Button>
                         </div>
                     )): (
-                        <div>Select a installation type</div>
+                        <Text white centered>Select a installation type</Text>
                     )}
                 </div>
                 <Text white>{t('configurator.context.applicationDescription')}</Text>
@@ -162,9 +163,9 @@ const Context = props => {
                 }
             </div>
             <div className={classes.navigationBottom}>
-                <Button color="transparent">{t('configurator.context.clear')}</Button>
+                <Button onClick={() => restoreState()} color="transparent">{t('configurator.context.clear')}</Button>
                 {displayNextPage() &&
-                    <NavLink to={"2"}>
+                    <NavLink to={"1"}>
                         <Button color="white">{t('configurator.context.next')}</Button>
                     </NavLink>
                 }

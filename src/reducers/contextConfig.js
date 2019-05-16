@@ -107,6 +107,10 @@ export default function contextConfig(state = initalState, action) {
                     }
                 }
             }
+        case 'RESTORE':
+            return {
+                ...initalState
+            }
         default:
             return state
     }
