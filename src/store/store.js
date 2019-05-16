@@ -1,12 +1,22 @@
-import { createStore } from "redux";
-import pageReducer from "reducers/pageReducer";
+import { createStore, combineReducers } from "redux";
+import contextConfig from "reducers/contextConfig";
+import { saveState, loadState } from 'utils/load/localStorage'
 
-const initialState = {
-    page: 0
+const persistedState = loadState()
+
+const rootReducer = combineReducers({
+    contextConfig
+})
+
+const store = createStore(rootReducer, persistedState);
+
+store.subscribe(() => {
+    saveState(store.getState())
+})
+
+function configureStore() {
+    return store
 }
 
-function configureStore(state = initialState) {
-    return createStore(pageReducer, state);
-}
 
 export default configureStore;

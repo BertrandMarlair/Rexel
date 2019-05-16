@@ -4,10 +4,37 @@
         "list": "Mes Listes"
     },
     "configurator": {
-        "context": {
+        "start": {
             "title": "configurateur bornes de recharge électriques",
             "description": "Rexel vous accompagne dans ce nouveau marché grâce au configurateur",
             "type": "Contexte"
+        },
+        "context": {
+            "type": "Type d'installation",
+            "application": "Quelle est l'application",
+            "applicationDescription": "Si une facturation séparée est souhaitée par l'employeur, vous devrez dans ce cas avoir recours à un système d'abonnement disponible auprès d'un provider. Ce provider peut mettre la borne visible pour des autres e-conducteurs via des systèmes de navigation.",
+            "resident": "Residentiel",
+            "enterprise": "Enterprise",
+            "horeca": "Horeca",
+            "private": "Usage Privé",
+            "privateParking": "Parking privé",
+            "semiPrivateParking": "Parking semi public",
+            "privateClientParking": "Parking clientèle (privé)",
+            "privateSemiPublicParking": "Parking (semi) public)",
+            "societe": "voiture de socitété",
+            "number": "Nombre/types de bornes",
+            "numberDescription1": "Il est conseillé de se rendre avec votre client final à l'endroit où les bornes seront installées. Ainsi vous pourrez personnellement l'informer des aspects techniques de la charge et proposer plus facilement une solution sur-mesure.", 
+            "numberDescription2": "Lors de vos premières installations un spécialiste Rexel pourra vous conseiller sur chantier.Vous pouvez le contacter via ev@rexel.be ",
+            "cars": "Pour quelle voiture ?",
+            "select": "Choisir le modèle",
+            "prise": "Prise",
+            "courantAc": "Courant AC max",
+            "chargeDC": "Charge rapide DC",
+            "chargeAC": "Charge rapide AC",
+            "battery": "Batterie",
+            "tensionAC": "Tension AC",
+            "clear": "Effacer",
+            "next": "Page suivante"
         }
     }
 }

@@ -13,9 +13,9 @@ const Start = props => {
     return (
         <div className={classes.main}>
             <div className={classes.iconTop}><SettingsIcon className={classes.icon}/></div>
-            <h2 className={classes.title}>{t('configurator.context.title')}</h2>
-            <h5 className={classes.description}>{t('configurator.context.description')}</h5>
-            <h5 className={classes.type}>{t('configurator.context.type')}</h5>
+            <h2 className={classes.title}>{t('configurator.start.title')}</h2>
+            <h5 className={classes.description}>{t('configurator.start.description')}</h5>
+            <h5 className={classes.type}>{t('configurator.start.type')}</h5>
             <div className={classes.iconLink}><Arrow className={classes.iconLast}/></div>
         </div>
     )
