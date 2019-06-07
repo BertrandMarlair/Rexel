@@ -7,6 +7,11 @@ const page =  {
     transition: transition.transition,
     background: whiteColor,
     boxSizing: 'border-box',
+    '@media (max-width: 960px)': {
+        width: '100vw',
+        position: 'relative',
+        transform: 'translateX(0)',
+    },
 }
 
 const side = {
@@ -14,6 +19,7 @@ const side = {
     height: '100%',
     padding: 20,
     boxSizing: 'border-box',
+    overflowX: 'hidden',
 }
 
 const ConfiguratorStyle = {
@@ -39,10 +45,9 @@ const ConfiguratorStyle = {
         transform: 'translateX(200vw)',
         animationDuration: '10s',
         animationName: 'displayOut',
-        zIndex: 0
+        zIndex: 0,
     },
     scene: {
-        width: '100vw',
         overflow: 'hidden',
         position: 'relative',
         minHeight: 'calc(100vh - 90px)',
@@ -57,6 +62,12 @@ const ConfiguratorStyle = {
         boxShadow: 'inset -80px 0px 100px 0px #71bde0',
         background: '#78CAF0',
     },
+    blueSide: {
+        padding: 20,
+        boxShadow: 'inset -80px 0px 100px 0px #71bde0',
+        background: '#78CAF0',
+        minHeight: 'calc(100vh - 90px)',
+    },
     whiteLeft: {
         ...side,
         background: 'white',
@@ -64,6 +75,11 @@ const ConfiguratorStyle = {
     whiteRight: {
         ...side,
         background: 'white',
+    },
+    whiteSide: {
+        padding: 20,
+        background: 'white',
+        minHeight: 'calc(100vh - 90px)',
     }
 }
 

@@ -13,12 +13,11 @@ import RadioChecked from '@material-ui/icons/RadioButtonChecked'
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import Cars from './Cars';
+import MediaQuery from 'react-responsive';
 
 const Context = props => {
     const contextConfig = useSelector(state => state.contextConfig)
     const dispatch = useDispatch()
-    console.log(contextConfig)
-    console.log(dispatch)
     
     const steps = getSteps();
     
@@ -53,18 +52,22 @@ const Context = props => {
         if(type === contextConfig.installation.target){
             return 'secondary'
         }
+        return 'unselect'
     }
-
+    
     function isTargetApplication(type, applicationId){
         if (type === applicationId){
             return 'secondary'
         }
+        return 'unselect'
     }
 
     function displayCars(){
         if (installation.target === 'resident'){
-            if (bornes.simple.target === 0 && bornes.double.target === null){
-                return true
+            if (installation.type.resident.target === 0 || installation.type.resident.target === 1){
+                if (bornes.simple.target === 0 && bornes.double.target === null){
+                    return true
+                }
             }
         }
         if (installation.target === 'enterprise'){
@@ -78,24 +81,13 @@ const Context = props => {
     }
 
     function displayNextPage(){
-        if (page === 0 && installation.target){
-            if (installation.type[installation.target].target !== null){
-                if (displayCars()){
-                    if (cars.modelCar !== null && cars.carSelect !== null){
-                        return true
-                    }
-                }else{
-                    if (bornes.simple.target !== null || bornes.double.target !== null) {
-                        return true
-                    }
-                }
-            }
-        }
+        if (page === 0) return true
         return false
     }
     
     return (
         <div className={classes.main}>
+            <h5 className={classes.title}>{t('configurator.context.title')}</h5>
             <div>
                 <Title white>{t('configurator.context.type')}</Title>
                 <div className={classes.buttonContainer}>
@@ -162,12 +154,26 @@ const Context = props => {
                 }
             </div>
             <div className={classes.navigationBottom}>
-                <Button onClick={() => restoreState()} color="transparent">{t('configurator.context.clear')}</Button>
-                {displayNextPage() &&
-                    <NavLink to={"1"}>
-                        <Button color="white">{t('configurator.context.next')}</Button>
+                <MediaQuery minWidth={960}>
+                    <Button onClick={() => restoreState()} white>{t('global.clear')}</Button>
+                    {displayNextPage() ? (
+                        <NavLink to={"1"}>
+                            <Button color="white">{t('global.next')}</Button>
+                        </NavLink>
+                    ):(
+                        <NavLink to={"0"}>
+                            <Button color="white">{t('global.prev')}</Button>
+                        </NavLink>
+                    )}
+                </MediaQuery>
+                <MediaQuery maxWidth={960}>
+                    <NavLink to={"0"}>
+                        <Button color="white">{t('global.prev')}</Button>
                     </NavLink>
-                }
+                    <NavLink to={"2"}>
+                        <Button color="white">{t('global.next')}</Button>
+                    </NavLink>
+                </MediaQuery>
             </div>
         </div>
     )

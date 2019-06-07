@@ -8,14 +8,28 @@ const ContextStyle = {
         flexDirection: 'column',
         justifyContent: 'space-between',
     },
+    title: {
+        color: '#ffffff',
+        textAlign: 'center',
+        fontWeight: 500,
+        margin: 'auto',
+        fontSize: 30,
+        textTransform: 'uppercase',
+    },
     buttonContainer: {
         margin: '20px 0px',
         display: 'flex',
         justifyContent: 'center',
+        '@media (max-width: 500px)': {
+            flexDirection: 'column'
+        },
     },
     button: {
         width: '100%',
         margin: '0 10px',
+        '@media (max-width: 500px)': {
+            width: '100%',
+        },
     },
     numberTarget: {
         width: '100%',
@@ -48,6 +62,7 @@ const ContextStyle = {
         display: 'flex',
         flexWrap: 'wrap',
         overflow: 'hidden',
+        justifyContent: 'space-around',
     },
     car: {
         background: whiteColor,
@@ -103,7 +118,11 @@ const ContextStyle = {
     navigationBottom: {
         display: 'flex',
         justifyContent: 'space-between',
-    }
+        marginBottom: 20,
+    },
+    margin: {
+        margin: 8,
+    },
 }
 
 export default ContextStyle;

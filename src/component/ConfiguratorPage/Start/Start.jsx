@@ -4,6 +4,7 @@ import StartStyle from "./StartStyle";
 import { useTranslation } from 'react-i18next';
 import SettingsIcon from '@material-ui/icons/SettingsInputComponent'
 import Arrow from '@material-ui/icons/ArrowForward'
+import { NavLink } from "react-router-dom"
 
 const Start = props => {
 
@@ -16,7 +17,11 @@ const Start = props => {
             <h2 className={classes.title}>{t('configurator.start.title')}</h2>
             <h5 className={classes.description}>{t('configurator.start.description')}</h5>
             <h5 className={classes.type}>{t('configurator.start.type')}</h5>
-            <div className={classes.iconLink}><Arrow className={classes.iconLast}/></div>
+            <div className={classes.iconLink}>
+                <NavLink to={'1'}>
+                    <Arrow className={classes.iconLast}/>
+                </NavLink>
+            </div>
         </div>
     )
 }

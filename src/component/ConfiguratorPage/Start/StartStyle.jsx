@@ -19,6 +19,9 @@ const StartStyle = {
         textTransform: 'uppercase',
         maxWidth: 550,
         margin: '30px auto',
+        '@media (max-width: 500px)': {
+            fontSize: 35,
+        },
     },
     description: {
         color: '#000000',

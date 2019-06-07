@@ -27,6 +27,7 @@ function RegularButton({ ...props }) {
     centered,
     icon,
     big,
+    white,
     ...rest
   } = props
   const btnClasses = classNames({
@@ -42,6 +43,7 @@ function RegularButton({ ...props }) {
     [classes.justIcon]: justIcon,
     [classes.icon]: icon,
     [classes.big]: big,
+    [classes.whiteText]: white,
     [className]: className,
   })
   return ( 
@@ -75,6 +77,7 @@ RegularButton.propTypes = {
     'dribbble',
     'reddit',
     'transparent',
+    'unselect',
   ]),
   size: PropTypes.oneOf(['sm', 'lg']),
   simple: PropTypes.bool,
@@ -88,6 +91,7 @@ RegularButton.propTypes = {
   muiClasses: PropTypes.object,
   icon: PropTypes.bool,
   big: PropTypes.bool,
+  white: PropTypes.bool,
 }
 
 export default withStyles(buttonStyle)(RegularButton)

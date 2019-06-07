@@ -1,13 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { Fragment } from 'react'
 import { withStyles } from '@material-ui/core'
 import ConfiguratorStyle from "../ConfiguratorStyle"
+import ElectricNetwork from "component/ConfiguratorPage/ElectricNetwork/ElectricNetwork"
+import MediaQuery from "react-responsive";
 
 const DisplayPage = props => {
 
     const { page, classes } = props
 
-    const rendering = () => {
+    const rendering = responsive => {
+        if (responsive){
+            if(page === 2) return true
+            return false
+        }
         if (page === 0) {
             return classes.prepared
         } else if (page === 1) {
@@ -16,24 +21,36 @@ const DisplayPage = props => {
             return classes.displayLeft
         } else if (page === 3) {
             return classes.mask
+        } else if (page === 4) {
+            return classes.mask
         } else {
             return false
         }
     }
 
     return (
-        rendering() ? (
-            <div className={rendering()}>
-                <div className={page % 2 ? classes.whiteRight : classes.whiteLeft}>
-                    <h1>Page 3</h1>
-                    <h2>Page: {page}</h2>
-                    <Link to={"2"}>next</Link>
-                    <Link to={"0"}>prev</Link>
-                </div>
-            </div>
-        ) : (
-                <div></div>
-            )
+        <Fragment>
+            <MediaQuery minWidth={960}>
+                {rendering() ? (
+                    <div className={rendering()}>
+                        <div className={page % 2 ? classes.whiteRight : classes.whiteLeft}>
+                            <ElectricNetwork page={page} />
+                        </div>
+                    </div>
+                ) : (
+                    <div></div>
+                )}
+            </MediaQuery>
+            <MediaQuery maxWidth={960}>
+                {rendering(true) ? (
+                    <div className={classes.whiteSide}>
+                        <ElectricNetwork page={page} />
+                    </div>
+                ) : (
+                    <div></div>
+                )}
+            </MediaQuery>
+        </Fragment>
     )
 }
 

@@ -1,6 +1,5 @@
 const HeaderStyle = {
     container: {
-        width: "100vw",
         height: 90,
         borderBottom: '1px solid #cccccc',
     },

@@ -5,42 +5,43 @@ const initalState = {
             resident: {
                 target: null,
                 name: "resident",
-                description: "Si votre client souhaite une borne à domicile.",
+                description: "configurator.context.residentDescription",
                 application: [{
                     id: 0,
                     name: "private",
-                    description: "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+                    description: "configurator.context.residentDescriptionPrivate"
                 }, {
                     id: 1,
                     name: "societe",
-                    description: "Si votre client souhaite facturer sa consommation à son employeur. Un abonnement chez un provider est requis dans ce cas.",
+                    description: "configurator.context.residentDescriptionSociete",
                 }]
             },
             enterprise: {
                 target: null,
                 name: "enterprise",
-                description: "Si la borne doit être installée sur un parking d'une société ou chez un indépendant",
+                description: "configurator.context.enterpriseDescription",
                 application: [{
                     id: 0,
                     name: "privateParking",
+                    description: "configurator.context.enterpriseDescriptionPrivateParking",
                 }, {
                     id: 1,
                     name: "semiPrivateParking",
-                    description: "Si le parking est également accessible aux autres e-conducteurs.",
+                    description: "configurator.context.enterpriseDescriptionSemiPrivateParking",
                 }]
             },
             horeca: {
                 target: null,
                 name: "horeca",
-                description: "Si votre client est un hôtel ou un restaurant.",
+                description: "configurator.context.horecaDescription",
                 application: [{
                     id: 0,
                     name: "privateClientParking",
-                    description: "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+                    description: "configurator.context.horecaPrivateClientParking",
                 }, {
                     id: 1,
                     name: "privateSemiPublicParking",
-                    description: "Si le parking donne également accès aux autres e-conducteurs qui ne sont pas clients de l'entreprise.",
+                    description: "configurator.context.horecaPrivateSemiPublicParking",
                 }]
             }
         }
@@ -50,13 +51,13 @@ const initalState = {
             target: null,
             name: "Simple",
             id: "simple",
-            description: "Emplacement pour une seule voiture",
+            description: "configurator.context.borneSimple",
         },
         double: {
             target: null,
             name: "Double",
             id: "double",
-            description: "Préférez une borne double pour deux emplacements de parking contigus. Le prix sera moindre et l'installation plus simple.",
+            description: "configurator.context.borneDouble",
         }
     },
     cars: {

@@ -3,6 +3,11 @@
     "header": {
         "list": "Mes Listes"
     },
+    "global": {
+        "next": "Page suivante",
+        "prev": "Page précédente",
+        "clear": "Effacer"
+    },
     "configurator": {
         "start": {
             "title": "configurateur bornes de recharge électriques",
@@ -10,12 +15,22 @@
             "type": "Contexte"
         },
         "context": {
+            "title": "Contexte",
             "type": "Type d'installation",
             "application": "Quelle est l'application",
             "applicationDescription": "Si une facturation séparée est souhaitée par l'employeur, vous devrez dans ce cas avoir recours à un système d'abonnement disponible auprès d'un provider. Ce provider peut mettre la borne visible pour des autres e-conducteurs via des systèmes de navigation.",
             "resident": "Residentiel",
+            "residentDescription": "Si votre client souhaite une borne à domicile.",
+            "residentDescriptionPrivate": "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+            "residentDescriptionSociete": "Si votre client souhaite facturer sa consommation à son employeur. Un abonnement chez un provider est requis dans ce cas.",
             "enterprise": "Enterprise",
+            "enterpriseDescription": "Si la borne doit être installée sur un parking d'une société ou chez un indépendant",
+            "enterpriseDescriptionPrivateParking": "Si la borne doit être installée sur un parking d'une société ou chez un indépendant",
+            "enterpriseDescriptionSemiPrivateParking": "Si le parking est également accessible aux autres e-conducteurs.",
             "horeca": "Horeca",
+            "horecaDescription": "Si votre client est un hôtel ou un restaurant.",
+            "horecaPrivateClientParking": "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+            "horecaPrivateSemiPublicParking": "Si le parking donne également accès aux autres e-conducteurs qui ne sont pas clients de l'entreprise.",
             "private": "Usage Privé",
             "privateParking": "Parking privé",
             "semiPrivateParking": "Parking semi public",
@@ -25,6 +40,8 @@
             "number": "Nombre/types de bornes",
             "numberDescription1": "Il est conseillé de se rendre avec votre client final à l'endroit où les bornes seront installées. Ainsi vous pourrez personnellement l'informer des aspects techniques de la charge et proposer plus facilement une solution sur-mesure.", 
             "numberDescription2": "Lors de vos premières installations un spécialiste Rexel pourra vous conseiller sur chantier.Vous pouvez le contacter via ev@rexel.be ",
+            "borneSimple": "Emplacement pour une seule voiture",
+            "borneDouble": "Préférez une borne double pour deux emplacements de parking contigus. Le prix sera moindre et l'installation plus simple.",
             "cars": "Pour quelle voiture ?",
             "select": "Choisir le modèle",
             "prise": "Prise",
@@ -32,9 +49,24 @@
             "chargeDC": "Charge rapide DC",
             "chargeAC": "Charge rapide AC",
             "battery": "Batterie",
-            "tensionAC": "Tension AC",
-            "clear": "Effacer",
-            "next": "Page suivante"
+            "tensionAC": "Tension AC"
+        },
+        "network": {
+            "title": "Réseau électique",
+            "type": "Type de réseau",
+            "typeDescription": "Certains véhicules électriques testent la qualité du neutre et de la résistance de terre avant d'autoriser la charge. Si le neutre ou la terre sont défaillants, vous devrez mettre en place une terre supplémentaire et assurer que la résistance de la terre soit bien aux normes avant la première mise en fonction de la borne de recharge. Si la différence de potentiel neutre/terre est trop importante, vous devrez installer un transformateur de séparation pour créer un nouveau réseau. Votre spécialiste REXEL vous aidera volontiers si vous avez besoin de plus d'informations à ce sujet. ev@rexel.be  Masquer",
+            "raccord": "Intensité de raccordement",
+            "raccordDescription": "Renseignez ici l'intensité de raccordement du compteur électrique de l'installation.",
+            "raccordInput": "intensité de raccordement (A)",
+            "intensityMax": "Intensité max. disponible pour les bornes",
+            "intensityMaxDescriotion": "Renseignez ici l'intensité que vous voulez dédier à la borne en période de recharge. Le courant min. doit être 16A.",
+            "intensityMaxInput": "Puissance disp.",
+            "GoodtoKnow": "Bon à Savoir",
+            "GoodtoKnowDescription": "Pour vous aider à déterminer le profil de consommation de vos clients, vous pouvez installer un moniteur intelligent Smappee. Voir Smappee."
+        },
+        "bornes": {
+            "title": "Configuration de borne",
+            "type": "Vos emplacements"
         }
     }
 }

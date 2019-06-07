@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { theme } from 'utils/theme/theme'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import configureStore from "store/store";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import routes from 'router/route'
 import { withTranslation } from 'react-i18next';
 import Header from 'component/Header/Header';
