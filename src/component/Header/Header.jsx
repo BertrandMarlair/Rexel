@@ -1,16 +1,16 @@
-import React from 'react';
-import { withStyles, Icon } from '@material-ui/core';
-import HeaderStyle from './HeaderStyle';
-import { useTranslation } from 'react-i18next';
-import Button from "../CustomButtons/Button";
+import React from 'react'
+import { withStyles, Icon } from '@material-ui/core'
+import HeaderStyle from './HeaderStyle'
+import { useTranslation } from 'react-i18next'
+import Button from '../CustomButtons/Button'
 
 const Header = props => {
     const { classes } = props
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation()
 
     const changeLanguage = lng => {
-        i18n.changeLanguage(lng);
-    };
+        i18n.changeLanguage(lng)
+    }
 
     return (
         <div className={classes.container}>
@@ -29,4 +29,4 @@ const Header = props => {
     )
 }
 
-export default withStyles(HeaderStyle)(Header);
+export default withStyles(HeaderStyle)(Header)

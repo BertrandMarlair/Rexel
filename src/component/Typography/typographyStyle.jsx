@@ -11,7 +11,7 @@ import {
   dangerColor,
   textColor,
   whiteColor,
-} from 'style/constant'
+} from '../../style/constant'
 
 const typographyStyle = {
   defaultFontStyle: {

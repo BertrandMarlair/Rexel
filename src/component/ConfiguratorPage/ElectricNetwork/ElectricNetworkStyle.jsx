@@ -64,4 +64,4 @@ const ElectricNetwork = {
     }
 }
 
-export default ElectricNetwork;
+export default ElectricNetwork

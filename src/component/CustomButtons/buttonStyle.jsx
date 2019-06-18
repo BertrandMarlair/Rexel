@@ -12,7 +12,7 @@ import {
     dangerColor,
     secondaryColor,
     darkColor,
-  } from 'style/constant'
+} from '../../style/constant'
   
   const buttonStyle = {
     button: {

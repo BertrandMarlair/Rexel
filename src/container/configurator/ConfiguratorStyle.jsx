@@ -1,4 +1,4 @@
-import { transition, whiteColor} from 'style/constant'
+import { transition, whiteColor } from '../../style/constant'
 
 const page =  {
     width: '50vw',
@@ -83,4 +83,4 @@ const ConfiguratorStyle = {
     }
 }
 
-export default ConfiguratorStyle;
+export default ConfiguratorStyle

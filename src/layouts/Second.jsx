@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
 const Second = props => {
     return (
         <div>
             {props.children}
             {props.count}
-            <button onClick={() => props.addCount("coucou")}>Add</button>    
+            <button onClick={() => props.addCount('coucou')}>Add</button>    
         </div>
     )
 }

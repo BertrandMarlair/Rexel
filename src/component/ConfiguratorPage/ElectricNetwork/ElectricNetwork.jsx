@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
-import { withStyles } from "@material-ui/core";
-import ElectricNetworkStyle from "./ElectricNetworkStyle";
-import { useTranslation } from 'react-i18next';
-import Title from 'component/Typography/Title';
-import Text from 'component/Typography/Normal';
-import Button from "component/CustomButtons/Button";
-import Select from "component/CustomInput/Select";
-import { useSelector, useDispatch } from 'react-redux';
-import Input from "component/CustomInput/Input";
-import { NavLink } from 'react-router-dom';
-import MediaQuery from "react-responsive";
+import React, { useEffect } from 'react'
+import MediaQuery from 'react-responsive'
+import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { withStyles } from '@material-ui/core'
+import { useSelector, useDispatch } from 'react-redux'
+import ElectricNetworkStyle from './ElectricNetworkStyle'
+import Title from '../../../component/Typography/Title'
+import Text from '../../../component/Typography/Normal'
+import Button from '../../../component/CustomButtons/Button'
+import Select from '../../../component/CustomInput/Select'
+import Input from '../../../component/CustomInput/Input'
 
 const ElectricNetwork = props => {
     const networkConfig = useSelector(state => state.networkConfig)
@@ -26,7 +26,7 @@ const ElectricNetwork = props => {
     
     useEffect(() => {
         const targetKw = (payload) => dispatch({ type: 'EDIT_NETWORK_KW', payload })
-        const intensity = type.intensity[type.intensity.findIndex(x => x.id === type.target)];
+        const intensity = type.intensity[type.intensity.findIndex(x => x.id === type.target)]
         if (intensity) {
             const calcul = {
                 tension: intensity.tension,
@@ -40,28 +40,28 @@ const ElectricNetwork = props => {
         }
     }, [type, raccord, intensityMax, kw, dispatch])
 
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     function isSelectType(type, taget){
         if (type === taget){
-            return "secondary"
+            return 'secondary'
         }else {
-            return "unselect"
+            return 'unselect'
         }
     }
 
     function handleSelectIntensityRaccord(e) {
-        targetIntesityRaccord(e.target.value);
+        targetIntesityRaccord(e.target.value)
     }
 
     function handleChangeIntensityMax(e) {
         if(raccord === '>125'){
             if (e.target.value > 0){
-                targetIntesityMax(e.target.value);
+                targetIntesityMax(e.target.value)
             }
         }else{
             if (e.target.value <= parseInt(raccord) && e.target.value > 0){
-                targetIntesityMax(e.target.value);
+                targetIntesityMax(e.target.value)
             }
         }
     }
@@ -85,7 +85,7 @@ const ElectricNetwork = props => {
     }
 
     function displayNextPage(){
-        let displayNext = null;
+        let displayNext = null
         if (page === 1 && installation.target) {
             if (installation.type[installation.target].target !== null) {
                 if (displayCars()) {
@@ -105,9 +105,9 @@ const ElectricNetwork = props => {
         }
         if (type.target !== null) displayNext = true
         else return false
-        if (raccord && raccord !== "") displayNext = true
+        if (raccord && raccord !== '') displayNext = true
         else return false
-        if (intensityMax && intensityMax !== "") displayNext = true
+        if (intensityMax && intensityMax !== '') displayNext = true
         else return false
         if (kw && kw > 0) displayNext = true
         else return false
@@ -157,7 +157,7 @@ const ElectricNetwork = props => {
                         <Text>{t('configurator.network.intensityMaxDescriotion')}</Text>
                     </div>
                     <div className={classes.item}>
-                        <Input type='number' value={intensityMax} onChange={(e) => handleChangeIntensityMax(e)} className={classes.select} />
+                        <Input type="number" value={intensityMax} onChange={(e) => handleChangeIntensityMax(e)} className={classes.select} />
                         <div className={classes.calcul}>
                             <span>Puiss. Disp.</span>
                             <span>{kw && kw.toFixed(2) + ' KW'}</span>
@@ -175,12 +175,12 @@ const ElectricNetwork = props => {
                 <div className={classes.navigationBottom}>
                     <div></div>
                     <MediaQuery maxWidth={960}>
-                        <NavLink to={"1"}>
+                        <NavLink to={'1'}>
                             <Button>{t('global.prev')}</Button>
                         </NavLink>
                     </MediaQuery>
                     {displayNextPage() ? (
-                        <NavLink to={"3"}>
+                        <NavLink to={'3'}>
                             <Button color="primary">{t('global.next')}</Button>
                         </NavLink>
                     ): (
@@ -192,4 +192,4 @@ const ElectricNetwork = props => {
     )
 }
 
-export default withStyles(ElectricNetworkStyle)(ElectricNetwork);
+export default withStyles(ElectricNetworkStyle)(ElectricNetwork)

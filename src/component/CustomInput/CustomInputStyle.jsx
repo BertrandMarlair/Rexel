@@ -1,7 +1,7 @@
 import {
     primaryColor,
     lightColor,
-} from 'style/constant'
+} from '../../style/constant'
 
 const CustomInputStyle = {
     select: {
@@ -28,4 +28,4 @@ const CustomInputStyle = {
     }
 }
 
-export default CustomInputStyle;
+export default CustomInputStyle

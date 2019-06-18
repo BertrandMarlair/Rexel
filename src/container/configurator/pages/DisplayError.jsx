@@ -6,4 +6,4 @@ const DisplayError = props => {
     )
 }
 
-export default DisplayError;
+export default DisplayError

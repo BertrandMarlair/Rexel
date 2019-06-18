@@ -1,14 +1,14 @@
 import React from 'react'
 import BornesStyle from './BornesStyle'
 import { withStyles } from '@material-ui/styles'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 import SettingsIcon from '@material-ui/icons/SettingsInputComponent'
 import Arrow from '@material-ui/icons/ArrowForward'
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 
 const BornesConfig = props => {
     const { classes } = props
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     return (
         <div className={classes.main}>

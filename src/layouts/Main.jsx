@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Fragment } from "react"
-import Second from "./Second";
+import React, { useState, Fragment } from 'react'
+import Second from './Second'
 
 const Main = () => {
-    const [el, setEl] = useState("12");
-    const [test, setTest] = useState(0);
+    const [el, setEl] = useState('12')
+    const [test, setTest] = useState(0)
 
     const addCount = newString => {
         setEl(newString)

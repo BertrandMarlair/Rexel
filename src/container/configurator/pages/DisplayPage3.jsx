@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import { withStyles } from '@material-ui/core'
-import ConfiguratorStyle from "../ConfiguratorStyle"
-import ElectricNetwork from "component/ConfiguratorPage/ElectricNetwork/ElectricNetwork"
-import MediaQuery from "react-responsive";
+import ConfiguratorStyle from '../ConfiguratorStyle'
+import ElectricNetwork from '../../../component/ConfiguratorPage/ElectricNetwork/ElectricNetwork'
+import MediaQuery from 'react-responsive'
 
 const DisplayPage = props => {
 
@@ -54,4 +54,4 @@ const DisplayPage = props => {
     )
 }
 
-export default withStyles(ConfiguratorStyle)(DisplayPage);
+export default withStyles(ConfiguratorStyle)(DisplayPage)

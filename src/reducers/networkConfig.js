@@ -34,8 +34,8 @@ const initalState = {
             ]
         },
 
-        raccord: "",
-        intensityMax: "",
+        raccord: '',
+        intensityMax: '',
         kw: null,
     },
 }

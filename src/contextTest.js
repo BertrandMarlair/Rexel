@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, {Component} from 'react'
+import axios from 'axios'
 class App extends Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       installation: {
         target: null,
@@ -10,45 +10,45 @@ class App extends Component {
           residentiel: {
             id: 0,
             target: null,
-            name: "resitent",
-            description: "Si votre client souhaite une borne à domicile.",
+            name: 'resitent',
+            description: 'Si votre client souhaite une borne à domicile.',
             application: [{
               id: 0,
-              name: "Usage privé",
-              description: "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+              name: 'Usage privé',
+              description: 'Si votre client ne souhaite pas facturer l\'utilisation des bornes.',
             }, {
               id: 1,
-              name: "Voiture de société",
-              description: "Si votre client souhaite facturer sa consommation à son employeur. Un abonnement chez un provider est requis dans ce cas.",
+              name: 'Voiture de société',
+              description: 'Si votre client souhaite facturer sa consommation à son employeur. Un abonnement chez un provider est requis dans ce cas.',
             }]
           },
           enterprise: {
             id: 1,
             target: null,
-            name: "enterprise",
-            description: "Si la borne doit être installée sur un parking d'une société ou chez un indépendant",
+            name: 'enterprise',
+            description: 'Si la borne doit être installée sur un parking d\'une société ou chez un indépendant',
             application: [{
               id: 0,
-              name: "Parking privé",
+              name: 'Parking privé',
             }, {
               id: 1,
-              name: "Parking semi public",
-              description: "Si le parking est également accessible aux autres e-conducteurs.",
+              name: 'Parking semi public',
+              description: 'Si le parking est également accessible aux autres e-conducteurs.',
             }]
           },
           horeca: {
             id: 2,
             target: null,
-            name: "horeca",
-            description: "Si votre client est un hôtel ou un restaurant.",
+            name: 'horeca',
+            description: 'Si votre client est un hôtel ou un restaurant.',
             application: [{
               id: 0,
-              name: "Parking clientèle (privé)",
-              description: "Si votre client ne souhaite pas facturer l'utilisation des bornes.",
+              name: 'Parking clientèle (privé)',
+              description: 'Si votre client ne souhaite pas facturer l\'utilisation des bornes.',
             }, {
               id: 1,
-              name: "Parking (semi) public",
-              description: "Si le parking donne également accès aux autres e-conducteurs qui ne sont pas clients de l'entreprise.",
+              name: 'Parking (semi) public',
+              description: 'Si le parking donne également accès aux autres e-conducteurs qui ne sont pas clients de l\'entreprise.',
             }]
           }
         }
@@ -56,9 +56,9 @@ class App extends Component {
       bornes: {
         simple: {
           target: null,
-          name: "Simple",
-          id: "simple",
-          description: "Emplacement pour une seule voiture",
+          name: 'Simple',
+          id: 'simple',
+          description: 'Emplacement pour une seule voiture',
           count: [{
             id: 0, 
             number: 1,
@@ -75,9 +75,9 @@ class App extends Component {
         },
         double: {
           target: null,
-          name: "Double",
-          id: "double",
-          description: "Préférez une borne double pour deux emplacements de parking contigus. Le prix sera moindre et l'installation plus simple.",
+          name: 'Double',
+          id: 'double',
+          description: 'Préférez une borne double pour deux emplacements de parking contigus. Le prix sera moindre et l\'installation plus simple.',
           count: [{
             id: 0,
             number: 1,
@@ -105,14 +105,14 @@ class App extends Component {
   }
 
   targetInstall = id => {
-    let installation = this.state.installation;
-    installation.target = id;
+    let installation = this.state.installation
+    installation.target = id
     this.setState({installation})
   }
 
   targetApplication = (id, selectId) => {
-    let installation = this.state.installation;
-    installation.type[id].target = selectId;
+    let installation = this.state.installation
+    installation.type[id].target = selectId
     this.setState({installation})
   }
 
@@ -139,11 +139,11 @@ class App extends Component {
   }
 
   render(){
-    const {installation, bornes} = this.state;
-    let type = [];
+    const {installation, bornes} = this.state
+    let type = []
     for(let i in installation.type){
       if (installation.type[i].id === installation.target) {
-        type = installation.type[i];
+        type = installation.type[i]
       };
     };
     return (
@@ -152,7 +152,7 @@ class App extends Component {
           const install = installation.type[context]
           return (
             <div key={`install${index}`} onClick={() => this.targetInstall(install.id)}>
-              <h2>{install.name} {installation.target === install.id && "targeted"}</h2>
+              <h2>{install.name} {installation.target === install.id && 'targeted'}</h2>
               <h4>{install.description}</h4>
             </div>
           )
@@ -161,7 +161,7 @@ class App extends Component {
         {type.application && type.application.map((application, index) => {
           return (
             <div key={`application${index}`} onClick={()=> this.targetApplication(type.name, application.id)}>
-              <h3>{application.name} {type.target === application.id && "targeted"}</h3>
+              <h3>{application.name} {type.target === application.id && 'targeted'}</h3>
               <h5>{application.description}</h5>
             </div>
           )
@@ -169,14 +169,14 @@ class App extends Component {
         {bornes.simple.count.map((borne, index)=> {
           return (
             <div key={`borneSimple${index}`} onClick={()=> this.targetBorneSimple(borne.id)}>
-              {borne.number} {borne.id === bornes.simple.target && "targeted"}
+              {borne.number} {borne.id === bornes.simple.target && 'targeted'}
             </div>
           )
         })}
         {bornes.double.count.map((borne, index)=> {
           return (
             <div key={`borneDouble${index}`} onClick={()=> this.targetBorneDouble(borne.id)}>
-              {borne.number} {borne.id === bornes.double.target && "targeted"}
+              {borne.number} {borne.id === bornes.double.target && 'targeted'}
             </div>
           )
         })}
@@ -186,8 +186,8 @@ class App extends Component {
           </div>
         }
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

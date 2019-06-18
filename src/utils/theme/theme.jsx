@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import {defaultFont} from 'style/constant'
+import { defaultFont } from '../../style/constant'
 
 export const theme = createMuiTheme({
     palette:{

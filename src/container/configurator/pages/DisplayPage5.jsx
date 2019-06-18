@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core'
-import ConfiguratorStyle from "../ConfiguratorStyle"
-import { useTranslation } from 'react-i18next';
-import MediaQuery from "react-responsive";
-import BornesConfig from 'component/ConfiguratorPage/BornesConfig/BornesConfig';
+import ConfiguratorStyle from '../ConfiguratorStyle'
+import { useTranslation } from 'react-i18next'
+import MediaQuery from 'react-responsive'
+import BornesConfig from '../../../component/ConfiguratorPage/BornesConfig/BornesConfig'
 
 const DisplayPage = props => {
     const { page, classes } = props
 
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     const rendering = responsive => {
         if (responsive) {
@@ -48,7 +48,7 @@ const DisplayPage = props => {
                         <h1>Page 5</h1>
                         <p>{t('title')}</p>
                         <h2>Page: {page}</h2>
-                        <Link to={"2"}>prev</Link>
+                        <Link to={'2'}>prev</Link>
                     </div>
                 ) : (
                     <div></div>
@@ -58,4 +58,4 @@ const DisplayPage = props => {
     )
 }
 
-export default withStyles(ConfiguratorStyle)(DisplayPage);
+export default withStyles(ConfiguratorStyle)(DisplayPage)

@@ -1,4 +1,4 @@
-import { greenColor } from "style/constant";
+import { greenColor } from '../../../style/constant'
 
 const StartStyle = {
     iconTop: {
@@ -51,4 +51,4 @@ const StartStyle = {
     }
 }
 
-export default StartStyle;
+export default StartStyle

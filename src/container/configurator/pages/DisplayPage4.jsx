@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core'
-import ConfiguratorStyle from "../ConfiguratorStyle"
-import MediaQuery from "react-responsive";
-import BornesSelect from 'component/ConfiguratorPage/BornesSelect/BornesSelect';
+import ConfiguratorStyle from '../ConfiguratorStyle'
+import MediaQuery from 'react-responsive'
+import BornesSelect from '../../../component/ConfiguratorPage/BornesSelect/BornesSelect'
 
 const DisplayPage = props => {
 
@@ -43,8 +43,8 @@ const DisplayPage = props => {
                     <div className={classes.whiteSide}>
                         <h1>Page 4</h1>
                         <h2>Page: {page}</h2>
-                        <Link to={"3"}>next</Link>
-                        <Link to={"1"}>prev</Link>
+                        <Link to={'3'}>next</Link>
+                        <Link to={'1'}>prev</Link>
                     </div>
                 ) : (
                     <div></div>
@@ -54,4 +54,4 @@ const DisplayPage = props => {
     )
 }
 
-export default withStyles(ConfiguratorStyle)(DisplayPage);
+export default withStyles(ConfiguratorStyle)(DisplayPage)

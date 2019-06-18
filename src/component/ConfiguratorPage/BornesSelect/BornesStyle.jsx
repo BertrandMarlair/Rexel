@@ -1,4 +1,4 @@
-import { greenColor } from "style/constant";
+import { greenColor } from '../../../style/constant'
 
 const BornesStyle = {
     wrapper: {
@@ -21,4 +21,4 @@ const BornesStyle = {
     }
 }
 
-export default BornesStyle;
+export default BornesStyle

@@ -1,13 +1,13 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { withStyles } from "@material-ui/core";
-import ContextStyle from "./ContextStyle";
-import { secondaryColor, whiteColor } from 'style/constant';
-import Select from "component/CustomInput/Select";
-import { useTranslation } from 'react-i18next';
-import Title from 'component/Typography/Title';
-import Text from 'component/Typography/Normal';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from "axios";
+import React, { Fragment, useEffect, useState } from 'react'
+import axios from 'axios'
+import { withStyles } from '@material-ui/core'
+import { useTranslation } from 'react-i18next'
+import { useSelector, useDispatch } from 'react-redux'
+import ContextStyle from './ContextStyle'
+import { secondaryColor, whiteColor } from '../../../style/constant'
+import Select from '../../../component/CustomInput/Select'
+import Title from '../../../component/Typography/Title'
+import Text from '../../../component/Typography/Normal'
 
 const Cars = props => {
     const { classes } = props
@@ -30,14 +30,13 @@ const Cars = props => {
     const targetModelCar = (payload) => dispatch({ type: 'SELECT_MODEL', payload })
     const targetCarSelect = (payload) => dispatch({ type: 'SELECT_CAR', payload })
 
-
     function handleSelectCar(index) {
-        targetCarSelect(index === carSelect ? null : index);
-        targetModelCar(null);
+        targetCarSelect(index === carSelect ? null : index)
+        targetModelCar(null)
     }
 
     function handleSelectModel(e) {
-        targetModelCar(e.target.value);
+        targetModelCar(e.target.value)
     }
 
     function selectCarModel(modelType) {
@@ -80,7 +79,7 @@ const Cars = props => {
         return models
     }
 
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     const selectCar = selectCarModel(modelCar)
     return (
         <Fragment>
@@ -96,7 +95,7 @@ const Cars = props => {
             </div>
             {carSelect !== null &&
                 <div className={classes.carSelect}>
-                    <Select value={modelCar ? modelCar : ""} onChange={(e) => handleSelectModel(e)} className={classes.select}>
+                    <Select value={modelCar ? modelCar : ''} onChange={(e) => handleSelectModel(e)} className={classes.select}>
                         <option value="">{t('configurator.context.select')}</option>
                         {renderCarsModel(carSelect)}
                     </Select>
@@ -160,4 +159,4 @@ const Cars = props => {
     )
 }
 
-export default withStyles(ContextStyle)(Cars);
+export default withStyles(ContextStyle)(Cars)

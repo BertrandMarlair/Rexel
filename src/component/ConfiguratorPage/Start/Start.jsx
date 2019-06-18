@@ -1,16 +1,16 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import StartStyle from "./StartStyle";
-import { useTranslation } from 'react-i18next';
-import SettingsIcon from '@material-ui/icons/SettingsInputComponent'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { withStyles } from '@material-ui/core'
 import Arrow from '@material-ui/icons/ArrowForward'
-import { NavLink } from "react-router-dom"
+import SettingsIcon from '@material-ui/icons/SettingsInputComponent'
+import StartStyle from './StartStyle'
 
 const Start = props => {
 
     const { classes } = props
 
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     return (
         <div className={classes.main}>
             <div className={classes.iconTop}><SettingsIcon className={classes.icon}/></div>
@@ -26,4 +26,4 @@ const Start = props => {
     )
 }
 
-export default withStyles(StartStyle)(Start);
+export default withStyles(StartStyle)(Start)

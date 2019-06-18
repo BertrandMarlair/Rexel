@@ -1,13 +1,13 @@
 import React from 'react'
-import BornesStyle from './BornesStyle'
+import { useTranslation } from 'react-i18next'
 import { withStyles } from '@material-ui/styles'
-import Title from 'component/Typography/Title'
-import { useTranslation } from 'react-i18next';
 import SettingsIcon from '@material-ui/icons/SettingsInputComponent'
+import BornesStyle from './BornesStyle'
+import Title from '../../../component/Typography/Title'
 
 const BornesSelect = props => {
     const { classes } = props
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     return (
         <div className={classes.main}>

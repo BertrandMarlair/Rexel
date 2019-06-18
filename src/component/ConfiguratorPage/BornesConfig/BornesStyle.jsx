@@ -1,4 +1,4 @@
-import { greenColor } from "style/constant";
+import { greenColor } from '../../../style/constant'
 
 const BornesStyle = {
     iconTop: {
@@ -51,4 +51,4 @@ const BornesStyle = {
     }
 }
 
-export default BornesStyle;
+export default BornesStyle

@@ -4,44 +4,44 @@ const initalState = {
         type: {
             resident: {
                 target: null,
-                name: "resident",
-                description: "configurator.context.residentDescription",
+                name: 'resident',
+                description: 'configurator.context.residentDescription',
                 application: [{
                     id: 0,
-                    name: "private",
-                    description: "configurator.context.residentDescriptionPrivate"
+                    name: 'private',
+                    description: 'configurator.context.residentDescriptionPrivate'
                 }, {
                     id: 1,
-                    name: "societe",
-                    description: "configurator.context.residentDescriptionSociete",
+                    name: 'societe',
+                    description: 'configurator.context.residentDescriptionSociete',
                 }]
             },
             enterprise: {
                 target: null,
-                name: "enterprise",
-                description: "configurator.context.enterpriseDescription",
+                name: 'enterprise',
+                description: 'configurator.context.enterpriseDescription',
                 application: [{
                     id: 0,
-                    name: "privateParking",
-                    description: "configurator.context.enterpriseDescriptionPrivateParking",
+                    name: 'privateParking',
+                    description: 'configurator.context.enterpriseDescriptionPrivateParking',
                 }, {
                     id: 1,
-                    name: "semiPrivateParking",
-                    description: "configurator.context.enterpriseDescriptionSemiPrivateParking",
+                    name: 'semiPrivateParking',
+                    description: 'configurator.context.enterpriseDescriptionSemiPrivateParking',
                 }]
             },
             horeca: {
                 target: null,
-                name: "horeca",
-                description: "configurator.context.horecaDescription",
+                name: 'horeca',
+                description: 'configurator.context.horecaDescription',
                 application: [{
                     id: 0,
-                    name: "privateClientParking",
-                    description: "configurator.context.horecaPrivateClientParking",
+                    name: 'privateClientParking',
+                    description: 'configurator.context.horecaPrivateClientParking',
                 }, {
                     id: 1,
-                    name: "privateSemiPublicParking",
-                    description: "configurator.context.horecaPrivateSemiPublicParking",
+                    name: 'privateSemiPublicParking',
+                    description: 'configurator.context.horecaPrivateSemiPublicParking',
                 }]
             }
         }
@@ -49,15 +49,15 @@ const initalState = {
     bornes: {
         simple: {
             target: null,
-            name: "Simple",
-            id: "simple",
-            description: "configurator.context.borneSimple",
+            name: 'Simple',
+            id: 'simple',
+            description: 'configurator.context.borneSimple',
         },
         double: {
             target: null,
-            name: "Double",
-            id: "double",
-            description: "configurator.context.borneDouble",
+            name: 'Double',
+            id: 'double',
+            description: 'configurator.context.borneDouble',
         }
     },
     cars: {
