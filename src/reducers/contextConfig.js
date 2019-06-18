@@ -118,7 +118,7 @@ export default function contextConfig(state = initalState, action) {
                 cars: {
                     ...state.cars,
                     carSelect: action.payload
-                }
+                } 
             }
         case 'SELECT_MODEL':
             return {

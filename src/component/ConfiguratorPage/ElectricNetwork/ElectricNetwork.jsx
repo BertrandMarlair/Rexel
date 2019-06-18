@@ -103,7 +103,7 @@ const ElectricNetwork = props => {
                 }
             }
         }
-        if (type.target) displayNext = true
+        if (type.target !== null) displayNext = true
         else return false
         if (raccord && raccord !== "") displayNext = true
         else return false
