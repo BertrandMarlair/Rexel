@@ -160,7 +160,7 @@ const ElectricNetwork = props => {
                         <Input type="number" value={intensityMax} onChange={(e) => handleChangeIntensityMax(e)} className={classes.select} />
                         <div className={classes.calcul}>
                             <span>Puiss. Disp.</span>
-                            <span>{kw && kw.toFixed(2) + ' KW'}</span>
+                            <span>{kw && kw.toFixed(2) + ' kW'}</span>
                         </div>
                     </div>
             </div>
