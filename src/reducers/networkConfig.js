@@ -5,7 +5,7 @@ const initalState = {
             intensity: [
                 {
                     id: 0,
-                    name: 'Monophasé 230 V avec neutre L1/N',
+                    name: 'network.type.monophasesansneutre',
                     tension: 230,
                     monophase: true,
                     neutre: true
@@ -33,7 +33,6 @@ const initalState = {
                 },
             ]
         },
-
         raccord: '',
         intensityMax: '',
         kw: null,
