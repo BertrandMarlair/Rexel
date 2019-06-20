@@ -154,13 +154,13 @@ const ElectricNetwork = props => {
                 <Title>{t('configurator.network.intensityMax')}</Title>
                 <div className={classes.container}>
                     <div className={classes.item}>
-                        <Text>{t('configurator.network.intensityMaxDescriotion')}</Text>
+                        <Text>{t('configurator.network.intensityMaxDescription')}</Text>
                     </div>
                     <div className={classes.item}>
                         <Input type="number" value={intensityMax} onChange={(e) => handleChangeIntensityMax(e)} className={classes.select} />
                         <div className={classes.calcul}>
-                            <span>Puiss. Disp.</span>
-                            <span>{kw && kw.toFixed(2) + ' kW'}</span>
+                            <span>{t('configurator.network.intensityMaxInput')}</span>
+                            <span>{kw && kw.toFixed(1) + ' kW'}</span>
                         </div>
                     </div>
             </div>

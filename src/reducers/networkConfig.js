@@ -15,7 +15,7 @@ const initalState = {
                     name: 'Monophasé 230 V sans neutre L1/L2',
                     tension: 230,
                     monophase: true,
-                    neutre: true
+                    neutre: false
                 },
                 {
                     id: 2,
@@ -28,7 +28,7 @@ const initalState = {
                     id: 3,
                     name: 'Triphasé 230 V sans neutre L1/L2/L3',
                     tension: 230,
-                    monophase: true,
+                    monophase: false,
                     neutre: false
                 },
             ]

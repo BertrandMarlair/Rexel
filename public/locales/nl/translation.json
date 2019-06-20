@@ -3,26 +3,32 @@
     "header": {
         "list": "Mijn lijst"
     },
+    "global": {
+        "next": "Volgende stap",
+        "prev": "Voorige stap",
+        "clear": "Verwijderen"	  
+    },
     "configurator": {
         "start": {
-            "title": "configurator voor elektrische laadklemmen",
+            "title": "configurator voor elektrische laadpaalen",
             "description": "Rexel ondersteunt u in deze nieuwe markt met de configurator.",
-            "type": "Contexte"
+            "type": "Situatie"
         },
         "context": {
-            "type": "Type installatie",
-            "application": "Wat is de applicatie",
-            "applicationDescription": "Als de werkgever een aparte factuur aanvraagt, moet u gebruik maken van een abonnementsysteem dat verkrijgbaar is bij een provider. Deze aanbieder kan de terminal via navigatiesystemen zichtbaar maken voor andere e-geleiders.",
+			"title": "Situatie",
+            "type": "Geef de aard van uw project aan",
+            "application": "Voor welke toepassing zal uw klant het laadpunt gebruiken ?",
+            "applicationDescription": "Een abonnement bij een provider is noodzakelijk indien aparte facturatie gewenst is voor de werkgever. Met de provider heeft u ook de mogelijkheid om uw laadpunt zichtbaar te stellen voor andere e-rijders via navigatiesystemen. De provider zorgt voor de automatische verrekening van de laadkosten van andere e-rijders.",
             "resident": "Residentiële",
             "enterprise": "Onderneming",
             "horeca": "Horeca",
-            "private": "Privégebruik",
+            "private": "Privé gebruik",
             "privateParking": "Parkeren privé",
             "semiPrivateParking": "Parkeerplaats semi-publiek",
             "privateClientParking": "Parkeerplaats voor klanten (privé)",
             "privateSemiPublicParking": "Parkeren (semi-openbaar)",
-            "societe": "dienstauto",
-            "number": "Aantal/types van terminals",
+            "societe": "bedrijfswagen",
+            "number": "Aantal/types van laadpunten",
             "numberDescription1": "Het is raadzaam om met uw eindklant mee te gaan naar de plaats waar de terminals worden geïnstalleerd. Op deze manier kunt u hem/haar persoonlijk informeren over de technische aspecten van de lading en gemakkelijker een oplossing op maat voorstellen.",
             "numberDescription2": "Tijdens uw eerste installatie kan een Rexel-specialist u ter plaatse adviseren en kunt u contact met hem opnemen via ev@rexel.be ",
             "cars": "Voor welke auto?",
@@ -32,9 +38,28 @@
             "chargeDC": "Lading rapide DC",
             "chargeAC": "Lading rapide AC",
             "battery": "Batterij",
-            "tensionAC": "Spanning AC",
-            "clear": "Verwijderen",
-            "next": "Volgende pagina"
+            "tensionAC": "Spanning AC"
+        },
+        "network": {
+            "title": "Elektriciteitsnet",
+            "type": "Wat is het beschikbare net ?",
+            "typeDescription": "Sommige elektrische voertuigen testen de aanwezigheid van de nulgeleider en de aarding. Indien het potentiaalverschil tussen nulgeleider en aarding te groot is, dient een scheidingstransfo te worden geïnstalleerd. De aarding dient tevens conform de normen te zijn. Uw Rexel specialist helpt u graag verder indien u hierover extra informatie wenst. ev@rexel.be",
+			"monoAvecNeutre": "Enkelfasig 230 V met nulgeleider L1/N",
+			"monoSansNeutre": "Enkelfasig 230 V zonder nulgeleider L1/L2",
+			"triAvecNeutre": "Driefasig 400V met nulgeleider L1/L2/L3/N",
+			"triSansNeutre": "Driefasig 230 V zonder nulgeleider L1/L2/L3",
+            "raccord": "Intensiteit van de aansluiting",
+            "raccordDescription": "Geef hier het vermogen van de teller in de aansluitingskast van de installatie.",
+            "raccordInput": "Intensiteit van de aansluiting (A)",
+            "intensityMax": "Max. beschikbare vermogen voor de laadpunten",
+            "intensityMaxDescription": "Geef hier de waarde van de stroom die gedurende het laden kan worden gebruikt. De min. beschikbare stroom dient 16A te zijn.",
+            "intensityMaxInput": "Besch. vermogen",
+            "GoodtoKnow": "Goed om weten",
+            "GoodtoKnowDescription": "U kan een intelligente monitor van Smappee installeren om het verbruiksprofiel te leren kennen van uw klant. Meer info : Smappee"
+        },
+        "bornes": {
+            "title": "Laadpalen configuratie",
+            "type": "Uw parkeerplaatsen"
         }
     }
 }
