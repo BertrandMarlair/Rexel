@@ -18,7 +18,7 @@ const Cars = props => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        axios.get('http://localhost:8888/api/meteoGetData.php').then((res) => {
+        axios.get('http://domoserver.ddns.net/ev2.0/backoffice/db_vehicules.php').then((res) => {
             setCars(res.data)
         }).catch((err) => {
             console.log(err)
