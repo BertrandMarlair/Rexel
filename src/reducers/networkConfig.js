@@ -5,7 +5,7 @@ const initalState = {
             intensity: [
                 {
                     id: 0,
-                    name: 'network.type.monophasesansneutre',
+                    name: 'configurator.network.monoAvecNeutre',
                     tension: 230,
                     monophase: true,
                     neutre: true

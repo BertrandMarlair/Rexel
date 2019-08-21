@@ -124,7 +124,7 @@ const ElectricNetwork = props => {
                     {type && type.intensity.map((typeIntensity, index) => (
                         <div key={`type${index}`} className={classes.button}>
                             <Button fullWidth big color={isSelectType(typeIntensity.id, type.target)} onClick={() => targetType(typeIntensity.id)}>
-                                {typeIntensity.name}
+                                {t(typeIntensity.name)}
                             </Button>
                         </div>
                     ))}
